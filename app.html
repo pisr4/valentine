@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="love" class="hidden">
+  <h1>To My Favorite Person ❤️</h1>
+  <p class="love-text">
+      فوفيزو✨
+عايز اقولك اني بحبك اوي بجد وحبيت اعمل الهديه الجديده دي عشان تكون معانا دايما وكل شويه اخش احط فيها كام ميموري كدا وربنا يخليكي ليا يقلبي وميحرمنيش منك بحبككك❤️❤️
+ويلا بقا منغير كلام اتفرررررجي 💖
+  </p>
+  <button onclick="showSection('memories')">كمّلي 💘</button>
+</section>
+
+<section id="memories" class="hidden">
+  <h1 class="section-title">Our Memories 💕</h1>
+
+  <div class="memories-container">
+
+    <div class="memory-card timer-card">
+      <p class="timer-label">بقالنا مع بعض:</p>
+      <div id="timer">
+        <div class="timer-unit"><span id="days">0</span><span>يوم</span></div>
+        <div class="timer-unit"><span id="hours">0</span><span>ساعة</span></div>
+        <div class="timer-unit"><span id="minutes">0</span><span>دقيقة</span></div>
+        <div class="timer-unit"><span id="seconds">0</span><span>ثانية</span></div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <img src="media/4.jpg">
+      <p class="caption">
+        اليوم دا كنا نازلين متخانقيين اصلا والكعاده يعني تم تصالح ومشينا كتير يومها بجد وكان يوم عسسسل ❤️
+      </p>
+    </div>
+
+    <div class="memory-card">
+      <img src="media/3.jpg">
+      <p class="caption">
+        وبردو اليوم دا كنا متخانقين ونازلين نسيب بعض بس رجعنا احسن من الاول وكان يوم جميل واصورنا فيه الصوره دي اللي عندي من احسن صورنا وفيها دفا وحنان كدا 😌💖
+      </p>
+    </div>
+
+    <div class="memory-card">
+      <video controls src="media/video.mp4"></video>
+      <p class="caption">
+        واغنيتي المفضله اللي كل مسمعها بتيجي ف بالي اول حاجه وكل كلامها معمول عشانك اصلا ومن اوائل الاغاني اللي بعتها ليكي وليها معزه ف قلبي كدا 💕
+      </p>
+    </div>
+
+  </div>
+
+  <button onclick="surprise()" class="surprise-btn">
+    Surprise 🎁
+  </button>
+</section>
+
+<div id="proposal" class="proposal">
+  <p class="proposal-text">فِداء… تتجوزيني؟ 💍❤️</p>
+  <button onclick="yes()" class="yes">YES 💖</button>
+  <button onclick="no()" class="no">NO 😏</button>
+  <p id="answer"></p>
+  <audio id="yesSound" src="media/yes-sound.mp3"></audio>
+</div>
+
+<div class="player">
+  <button id="playBtn">⏸</button>
+  <div class="progress-container">
+    <div class="progress"></div>
+  </div>
+</div>
+
+<div class="hearts"></div>
+
+<audio id="audio" src="media/song.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

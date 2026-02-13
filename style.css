@@ -1,0 +1,248 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hidden { display: none; }
+
+/* ================= BODY ================= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg,#ff758c,#ff7eb3);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-bottom: 80px; /* space for player */
+}
+
+body.dark {
+  background: linear-gradient(135deg,#1e1e1e,#2c003e);
+}
+
+/* ================= HEADINGS ================= */
+h1 { margin-top: 40px; font-size: 28px; }
+.section-title { margin-top: 40px; font-size: 28px; }
+
+/* ================= CENTER BOX ================= */
+.center-box {
+  margin-top: 15vh;
+  padding: 0 10px;
+}
+
+/* ================= INPUTS & BUTTONS ================= */
+input, button {
+  padding: 14px 20px;
+  font-size: 20px;
+  margin: 10px 0;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+button {
+  background: #ff2f6d;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #ff1f5d;
+}
+
+/* ================= LOVE TEXT ================= */
+.love-text {
+  width: 90%;
+  margin: 20px auto;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+/* ================= MEMORIES ================= */
+.memories-container {
+  width: 95%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.memory-card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+  transition: 0.3s ease;
+}
+
+.memory-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.memory-card img,
+.memory-card video {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.caption {
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 0 10px;
+  text-align: center;
+  opacity: 0.95;
+}
+
+/* ================= TIMER CARD (NEW ADDITION) ================= */
+.timer-card {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.timer-label {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#timer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.timer-unit {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.timer-unit span:first-child {
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.timer-unit span:last-child {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ================= PLAYER ================= */
+.player {
+  position: fixed;
+  bottom: 15px;           /* شوية فوق من تحت */
+  right: 15px;            /* بدل الوسط خليها على اليمين */
+  background: rgba(0,0,0,0.4);
+  padding: 10px 18px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+/* لو محتاج تقلل حجم البروجريس للموبايل */
+.progress-container {
+  width: 150px;
+  height: 6px;
+  background: #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: #ff2f6d;
+  border-radius: 10px;
+}
+
+/* ================= BODY PADDING ================= */
+body {
+  padding-bottom: 100px; /* عشان البلاير ميغطيش زرار Surprise */
+}
+
+/* ================= PROPOSAL ================= */
+.proposal {
+  display: none;
+  margin-top: 30px;
+}
+
+.proposal.show {
+  display: block;
+  animation: fadeIn 1s ease;
+}
+
+.proposal-text {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.surprise-btn {
+  margin-top: 25px;
+  font-size: 18px;
+  padding: 12px 25px;
+  background: linear-gradient(45deg,#ff2f6d,#ff8fab);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.surprise-btn:hover {
+  transform: scale(1.05);
+}
+
+/* YES / NO BUTTONS */
+.yes { background: #28a745; }
+.no { background: #dc3545; }
+
+/* ================= HEARTS ================= */
+.hearts {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  bottom: 0;
+  font-size: 22px;
+  animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (min-width: 480px) {
+  .caption { font-size: 18px; }
+  .player { padding: 12px 20px; }
+}
+
+@media (min-width: 768px) {
+  .memories-container { gap: 50px; }
+  .caption { font-size: 20px; }
+  .player { padding: 14px 25px; }
+}
