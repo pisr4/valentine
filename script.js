@@ -89,7 +89,7 @@ function surprise() {
 
 function yes() {
   document.getElementById("answer").innerText =
-    "وأهو ده أحلى YES في حياتي كلها 💍❤️ — عمر";
+    "أحلي يسس في حياتي كلها💍❤️";
 
   document.getElementById("yesSound").play();
   document.body.classList.add("dark");
@@ -141,4 +141,5 @@ function updateTimer() {
 
 // تحديث كل ثانية
 setInterval(updateTimer, 1000);
+
 updateTimer();
